@@ -2,6 +2,8 @@ package com.example.affirmations
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.affirmations.adapter.ItemAdapter
 import com.example.affirmations.data.Datasource
@@ -15,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         val myDataset = Datasource().loadAffirmations()
 
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
+        recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = ItemAdapter(this,myDataset)
 
         // Use this setting to improve performance if you know that changes
