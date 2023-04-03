@@ -1,6 +1,5 @@
 package com.example.affirmations.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,12 +8,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.affirmations.R
 import com.example.affirmations.model.Affirmation
+import org.junit.runner.manipulation.Ordering
 
 /**
  * Adapter for the [RecyclerView] in [MainActivity]. Displays [Affirmation] data object.
  */
 class ItemAdapter(
-    private val context: Context,
+    private val context: Ordering.Context,
     private val dataset: List<Affirmation>
     ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
